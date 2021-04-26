@@ -1,0 +1,84 @@
+.preview {
+	&__text {
+		display: flex;
+		height: 200px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__title {
+		font-family: "OpenSans", sans-serif;
+		font-size: 30px;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: -0.025em;
+		color: #818181;
+
+		> h1 span {
+			font-weight: 700;
+		}
+	}
+
+	&__subtitle {
+		font-family: "PTSans", sans-serif;
+		text-align: center;
+		font-size: 15px;
+		line-height: 20px;
+		font-weight: 400;
+		color: #9a9a9a;
+		margin-top: 30px;
+	}
+
+	&__cards {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item {
+		display: flex;
+		height: 320px;
+		width: 30%;
+		flex-direction: column;
+		align-items: center;
+
+		&:nth-child(2) {
+			justify-content: flex-end;
+		}
+
+		> a img:hover { 							/*не работает*/							
+			transform: scale(1.01);
+			transition: all 0.3s ease 0s;
+		}
+
+		> h3 {
+			font-family: "OpenSans", sans-serif;
+			font-size: 20px;
+			line-height: 20px;
+			font-weight: 400;
+			color: #7b7b7b;
+			text-align: center;
+			margin: 18px 0 18px 0;
+
+			> span {
+				font-weight: 700;
+			}
+		}
+
+		> p {
+			font-family: "PTSans", sans-serif;
+			font-size: 14px;
+			line-height: 18px;
+			font-weight: 400;
+			color: #9a9a9a;
+			text-align: center;
+		}
+	}
+
+	&__triangle {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		margin-top: 25px;
+	}
+}

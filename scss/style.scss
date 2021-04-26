@@ -1,0 +1,14 @@
+@import "_null";
+@import "_fonts";
+@import "_header";
+@import "_slider";
+@import "_preview";
+@import "_cards";
+@import "_icons";
+@import "_footer";
+
+.container {
+   width: 100%;
+   max-width: 980px;
+   margin: 0 auto;
+}

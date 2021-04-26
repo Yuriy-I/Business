@@ -1,0 +1,21 @@
+.icons {
+   &__box {
+      display: flex;
+      height: 175px;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+
+      > a img {
+         opacity: 0.8;
+
+         &:last-child {
+            opacity: 0.1;
+         }
+
+         &:hover {
+            opacity: 0.1;
+         }
+      }
+   }
+}

@@ -1,0 +1,53 @@
+.cards {
+   width: 100%;
+   background-color: #eeeeee;
+
+   &__box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 10px 0 50px 0;
+   }
+
+   &__item {
+      display: flex;
+      width: 31%;
+      height: 280px;
+      flex-direction: column;
+      border: solid 1px #c5c5c5;
+      margin-top: 30px;
+
+      > a img {
+         width: 100%;
+      }
+
+      > h2 {
+         font-family: "OpenSans", sans-serif;
+         font-size: 14px;
+         font-weight: 700;
+         color: #717070;
+         margin: 20px 20px 10px 20px;
+      }
+
+      > p {
+         font-family: "PTSans", sans-serif;
+         font-size: 14px;
+         line-height: 1.2;
+         font-weight: 400;
+         color: #818181;
+         margin: 0 20px 0 20px;
+      }
+
+      &:hover {
+         border: solid 1px #646464;
+         transform: scale(1.005) rotate(-1deg);
+         transition: all 0.3s ease 0s;
+
+         &:nth-child(odd) {
+            border: solid 1px #646464;
+            transform: scale(1.005) rotate(1deg);
+            transition: all 0.3s ease 0s;
+         }
+      }
+   }
+}
