@@ -1,12 +1,12 @@
 .cards {
    width: 100%;
    background-color: #eeeeee;
+   padding: 25px 0;
 
    &__box {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      padding: 10px 0 50px 0;
    }
 
    &__item {
@@ -15,7 +15,8 @@
       height: 280px;
       flex-direction: column;
       border: solid 1px #c5c5c5;
-      margin-top: 30px;
+      margin: 15px 0;
+      transition: all 0.3s ease 0s;
 
       > a img {
          width: 100%;
@@ -48,6 +49,28 @@
             transform: scale(1.005) rotate(1deg);
             transition: all 0.3s ease 0s;
          }
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .cards {
+      &__box {
+         justify-content: space-around;
+      }
+      &__item {
+         width: 45%;
+      }
+   }
+}
+
+@media (max-width: 376px) {
+   .cards {
+      &__box {
+         justify-content: center;
+      }
+      &__item {
+         width: 90%;
       }
    }
 }

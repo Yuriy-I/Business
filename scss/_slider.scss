@@ -4,16 +4,26 @@
    max-width: 1366px;
    height: 100%;
    max-height: 454px;
-   background: url(/img/Slider/slider_bg.png) no-repeat; /*не адаптивная картинка, лучше вставлять через html?*/
    margin: 0 auto;
    flex-direction: column;
+   position: relative;
+
+   >img {
+      display: flex;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
 
    &__bar {
       display: flex;
       width: 100%;
-      height: 100%;
+      height: 80%;
       justify-content: space-between;
       align-items: center;
+      position: relative;
+      z-index: 2;
    }
 
    &__arrow {
@@ -23,6 +33,12 @@
       border-left: solid 2px #ffffff;
       border-bottom: solid 2px #ffffff;
       transform: rotate(45deg);
+      margin: 20px;
+
+      &:hover {
+         border-left: solid 2px #66d6dd;
+         border-bottom: solid 2px #66d6dd;
+      }
 
       &--wright {
          display: flex;
@@ -31,6 +47,12 @@
          border-left: solid 2px #ffffff;
          border-bottom: solid 2px #ffffff;
          transform: rotate(225deg);
+         margin: 20px;
+
+         &:hover {
+            border-left: solid 2px #66d6dd;
+            border-bottom: solid 2px #66d6dd;
+         }
       }
    }
 
@@ -63,8 +85,11 @@
    &__dots {
       /*не реагирует на ширину блока (пришлось в поинты добавлять маргины)*/
       display: flex;
-      height: 10%;
+      height: 20%;
       justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 2;
    }
 
    &__point {

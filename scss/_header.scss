@@ -10,7 +10,7 @@
       align-items: center;
    }
    &--up {
-      height: 59px;
+      min-height: 59px;
       background-color: #252323;
    }
 
@@ -20,9 +20,8 @@
       margin-left: 14px;
    }
 
-   &__socials {
+   &__socials {         //нужно вынести из heder и сделать отдельный блок
       display: flex;
-      width: 25%;
       justify-content: flex-end;
       align-items: center;
    }
@@ -30,6 +29,10 @@
    &__link {
       display: flex;
       margin: 0 8px 0 14px;
+
+      > img:hover {
+         transform: scale(1.1);
+      }
    }
 
    /*нижняя часть шапки-----------------------------------------------------------------------------------------*/
@@ -47,6 +50,7 @@
       height: 100%;
       justify-content: space-between;
       margin-left: 14px;
+      flex-wrap: wrap;
    }
 
    &__item {
@@ -78,7 +82,8 @@
       align-items: center;
       position: relative;
 
-      &:focus {                           /*не работает*/
+      &:focus {
+         /*не работает*/
          box-shadow: 0 0 1 #252323;
       }
    }
@@ -99,5 +104,34 @@
       display: flex;
       position: absolute;
       left: 85%;
+   }
+}
+
+@media (max-width: 768px) {
+   .header {
+      &__nav {
+         flex-direction: column-reverse;
+      }
+      &__menu {
+         width: 100%;
+         justify-content: space-around;
+         margin-left: 0px;
+      }
+      &__form {
+         align-self: flex-end;
+         margin-top: 10px;
+      }
+   }
+}
+@media (max-width: 440px) {
+   .header {
+      &__menu {
+         > li {
+            width: 30%;
+         }
+      }
+      &__item {
+         justify-content: center;
+      }
    }
 }

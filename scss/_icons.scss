@@ -1,20 +1,47 @@
 .icons {
    &__box {
       display: flex;
-      height: 175px;
+      min-height: 175px;
       width: 100%;
       justify-content: space-between;
       align-items: center;
 
+      > a {
+         width: 15%;
+      }
+
       > a img {
          opacity: 0.8;
+         width: 100%;
 
          &:last-child {
-            opacity: 0.1;
+            opacity: 0.5;
          }
 
          &:hover {
-            opacity: 0.1;
+            opacity: 0.9;
+         }
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .icons {
+      &__box {
+         > a {
+            width: 20%;
+         }
+      }
+   }
+}
+
+@media (max-width: 500px) {
+   .icons {
+      &__box {
+         flex-wrap: wrap;
+         > a {
+            width: 30%;
+            margin: 0 10%;
          }
       }
    }
